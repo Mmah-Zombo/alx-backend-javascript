@@ -1,9 +1,10 @@
 import Currency from './3-currency'
 
 export default class Pricing extends Currency {
-  constructor (Number, Currency) {
-    this._amount = Number
-    this._currency = Currency
+  constructor (amount, currency) {
+    super(amount, currency)
+    this._amount = amount
+    this._currency = currency
   }
 
   get amount () {
