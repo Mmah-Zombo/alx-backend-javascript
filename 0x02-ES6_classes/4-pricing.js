@@ -24,7 +24,7 @@ export default class Pricing extends Currency {
   }
 
   displayFullPrice () {
-    return `${this.amount} ${this.currency} ${this.code}`
+    return `${this.amount} ${this.name} ${this.code}`
   }
 
   static convertPrice (amount, conversionRate) {
