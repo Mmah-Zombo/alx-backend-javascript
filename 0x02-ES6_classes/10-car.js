@@ -1,5 +1,5 @@
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable linebreak-style */
+/* eslint-disable no-underscore-dangle */
 export default class Car {
   constructor(brand, motor, color) {
     this._brand = brand;
