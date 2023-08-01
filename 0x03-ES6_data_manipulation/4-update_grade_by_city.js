@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 export default function updateStudentGradeByCity(listt, city, newGrades) {
-  const defaultgrade = { grade: 'N/A'};
+  const defaultgrade = { grade: 'N/A' };
   const citystud = listt.filter((stud) => stud.location === city);
   const newList = citystud.map((stud) => ({
     id: stud.id,
