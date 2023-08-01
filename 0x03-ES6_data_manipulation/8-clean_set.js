@@ -7,7 +7,7 @@ export default function cleanSet(set, startString) {
   }
   for (let each of set) {
     if (each.startsWith(startString)) {
-      each = each.replace(startString, '');
+      each = each.slice(startString.length);
       arr.push(String(each));
     }
   }
