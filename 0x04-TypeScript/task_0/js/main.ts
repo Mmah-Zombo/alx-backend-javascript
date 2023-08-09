@@ -1,4 +1,4 @@
-interface Student {
+export interface Student {
     firstName: string;
     lastName: string;
     age: number;
@@ -6,14 +6,14 @@ interface Student {
 }
 
 // Creates two students
-const student1: Student = {
+export const student1: Student = {
     firstName: "Linda",
     lastName: "Smith",
     age: 21,
     location: "Goderich",
 };
 
-const student2: Student = {
+export const student2: Student = {
     firstName: "Mariam",
     lastName: "Windsor",
     age: 19,
