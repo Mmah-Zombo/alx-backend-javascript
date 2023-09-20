@@ -8,10 +8,9 @@ const sendPaymentRequestToApi = require('./3-payment');
 
 describe('Tests for sendPaymentRequestToApi', () => {
   it('resturns the same output as Utils.calculateNumber', () => {
-    const spy2 = sinon.spy(sendPaymentRequestToApi);
+    const spy = sinon.spy(sendPaymentRequestToApi);
     sendPaymentRequestToApi('SUM', 3, 4);
     Utils.calculateNumber('SUM', 3, 4);
-    expect(spy2.returned(Utils.calculateNumber('SUM', 3, 4)));
-    spy2.restore();
+    expect(spy.returned(Utils.calculateNumber('SUM', 3, 4)));
   });
 });
