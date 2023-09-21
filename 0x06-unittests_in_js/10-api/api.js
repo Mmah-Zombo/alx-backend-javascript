@@ -3,6 +3,7 @@
 const express = require('express');
 
 const app = express();
+app.use(express.json());
 
 app.get('/', (_, res) => {
   res.send('Welcome to the payment system');
@@ -17,7 +18,7 @@ app.get('/available_payments', (req, res) => {
   res.json({ payment_methods: { credit_cards: true, paypal: false } });
 });
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
   const { userName } = req.body;
   res.send(`Welcome ${userName}`);
 });

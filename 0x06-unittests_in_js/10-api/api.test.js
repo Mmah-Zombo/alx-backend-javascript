@@ -44,7 +44,7 @@ describe('API Tests', () => {
   });
 
   it('returns status code 200 and correct message for /login', (done) => {
-    request.get('http://localhost:7865/login', { json: { userName: 'Zombo' } }, (_, res, body) => {
+    request.post('http://localhost:7865/login', { json: { userName: 'Zombo' } }, (_, res, body) => {
       expect(res.statusCode).to.be.equal(200);
       expect(body).to.be.equal('Welcome Zombo');
       done();
