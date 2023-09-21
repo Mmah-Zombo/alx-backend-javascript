@@ -46,7 +46,7 @@ describe('API Tests', () => {
           paypal: false,
         },
       };
-      expect(body).to.be.deep.equal(expectedResponse);
+      expect(JSON.parse(body)).to.be.deep.equal(expectedResponse);
       done();
     });
   });
