@@ -38,13 +38,13 @@ describe('API Tests', () => {
           paypal: false,
         },
       };
-      expect(response.body).to.deep.equal(expectedResponse);
+      expect(body).to.deep.equal(expectedResponse);
       done();
     });
   });
 
   it('returns status code 200 and correct message for /login', (done) => {
-    request.get('http://localhost:7865/login', { json: { username: 'Zombo' } }, (_, res, body) => {
+    request.get('http://localhost:7865/login', { json: { userName: 'Zombo' } }, (_, res, body) => {
       expect(res.statusCode).to.be.equal(200);
       expect(body).to.be.equal('Welcome Zombo');
       done();
