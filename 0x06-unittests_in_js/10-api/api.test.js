@@ -29,6 +29,14 @@ describe('API Tests', () => {
     });
   });
 
+  it('returns status code 200 and correct message for /login', (done) => {
+    request.post('http://localhost:7865/login', { json: { userName: 'Zombo' } }, (_, res, body) => {
+      expect(res.statusCode).to.be.equal(200);
+      expect(body).to.be.equal('Welcome Zombo');
+      done();
+    });
+  });
+
   it('returns status code 200 for a get request to /available_payments', (done) => {
     request.get('http://localhost:7865/available_payments', (_, res, body) => {
       expect(res.statusCode).to.be.equal(200);
@@ -38,15 +46,7 @@ describe('API Tests', () => {
           paypal: false,
         },
       };
-      expect(body).to.deep.equal(expectedResponse);
-      done();
-    });
-  });
-
-  it('returns status code 200 and correct message for /login', (done) => {
-    request.post('http://localhost:7865/login', { json: { userName: 'Zombo' } }, (_, res, body) => {
-      expect(res.statusCode).to.be.equal(200);
-      expect(body).to.be.equal('Welcome Zombo');
+      expect(body).to.be.deep.equal(expectedResponse);
       done();
     });
   });
