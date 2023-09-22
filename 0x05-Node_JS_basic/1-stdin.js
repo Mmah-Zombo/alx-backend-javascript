@@ -4,5 +4,3 @@ process.stdin.on('data', (data) => {
   console.log(`Your name is ${data}`);
   process.stdin.destroy();
 })
-// const ur_name = process.stdin.read();
-// process.stdout.write();
