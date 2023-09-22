@@ -22,6 +22,7 @@ describe('API Tests', () => {
   });
 
   it('should return a 404 status code when :id is not a number', (done) => {
+    // eslint-disable-next-line no-unused-vars
     request.get('http://localhost:7865/cart/abc', (_, res, body) => {
       expect(res.statusCode).to.be.equal(404);
       done();
